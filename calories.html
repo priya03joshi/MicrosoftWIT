@@ -1,0 +1,134 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/calories_style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+		
+    <title>FitHit-burnCalories</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                    <img src="resources/img/logo-white.png" alt="Logo" class="logo">
+                    <img src="resources/img/logo.png" alt="Logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+						<li><a href="index.html">Home</a></li>
+                        <li><a href="bmi.html">BMI</a></li>
+                        <li><a href="physician.html">Near me</a></li>
+                        <li><a href="calories.html">Workout</a></li>
+                        <li><a target="_blank" href="https://www.reebok.com/us/blog?SSAID=314743&cm_mmc=Rbkaffiliates_SAS-_-314743-_-None-_-banner-_-dv%3AeCom-_-cn%3A450685-_-pc%3ANone&cm_mmc1=US&cm_mmc2=reebok-NA-eCom-Affiliates-314743-None-None-US-450685-None&dclid=CM7z9aLJ4-4CFfgdtwAd-iEHow&sscid=21k5_c4ela">Insight</a></li>
+						<li><a href="logout.php">Logout</a></li>
+					</ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </nav>
+				<section class="section-form">
+							<div class="row">
+								<h2>Enter The Food That You Had</h2>
+							</div>
+							<div class="row">
+								<form class="contact-form" name="contact-form">
+									<div class="row">
+										<div class="col span-1-of-3">
+											<label for="food">Food</label>
+										</div>
+										<div class="col span-2-of-3">
+											<input type="text" name="food" id="food" placeholder="Eg-Pizza,Chicken,Burger,Pasta" required>
+										</div>
+										
+									</div>
+									<div class="burn_calories">
+											<input type="button" value="Burn Calories!" onclick="burnCalories(this)" >
+									</div>
+									<div class="row">
+										<div class="col span-1-of-3">
+											<label type="text" for="cal">Calories</label>
+										</div>
+										<div class="col span-2-of-3">
+											<input type="text" name="cal" id="cal">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col span-1-of-3">
+											<label type="text" for="walk">Walking</label>
+										</div>
+										<div class="col span-2-of-3">
+											<input type="text" name="walk" id="walk">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col span-1-of-3">
+											<label type="text" for="run">Running</label>
+										</div>
+										<div class="col span-2-of-3">
+											<input type="text" name="run" id="run">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col span-1-of-3">
+											<label type="text" for="jump">Jumping rope</label>
+										</div>
+										<div class="col span-2-of-3">
+											<input type="text" name="jump" id="jump">
+										</div>
+									</div>
+								</form>
+									
+								
+							</div>								
+				</section>
+						</nav>
+						</header>
+						<footer>
+							<div class="row">
+								<div class="col span-1-of-2">
+									<ul class="footer-nav">
+										<li><a href="index.html">Home</a></li>
+                        <li><a href="bmi.html">BMI</a></li>
+                        <li><a href="physician.html">Near me</a></li>
+                        <li><a href="calories.html">Workout</a></li>
+                        <li><a target="_blank" href="https://www.reebok.com/us/blog?SSAID=314743&cm_mmc=Rbkaffiliates_SAS-_-314743-_-None-_-banner-_-dv%3AeCom-_-cn%3A450685-_-pc%3ANone&cm_mmc1=US&cm_mmc2=reebok-NA-eCom-Affiliates-314743-None-None-US-450685-None&dclid=CM7z9aLJ4-4CFfgdtwAd-iEHow&sscid=21k5_c4ela">Insight</a></li>
+									</ul>
+								</div>
+								<div class="col span-1-of-2">
+									<ul class="social-links">
+										<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+										<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+										<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+										<li><a href="#"><i class="ion-social-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</footer>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="resources/js/script.js"></script>
+	<script type="text/javascript" src="resources/js/calories.js"></script>
+	
+    
+    </body>  
+    
+</html>
+<?php 
+}else{
+     header("Location: main.php");
+     exit();
+}

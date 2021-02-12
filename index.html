@@ -1,0 +1,230 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+		
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>FitHit-Home</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row" >
+                    <img src="resources/img/logo-white.png" alt="Logo" class="logo">
+                    <img src="resources/img/logo.png" alt="Logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+						<li><a href="index.html">Home</a></li>
+                        <li><a href="#bmi">BMI</a></li>
+                        <li><a href="#near_me">Near me</a></li>
+                        <li><a href="#workout">Workout</a></li>
+                        <li><a href="#insight">Insight</a></li>
+						<li><a href="logout.php">Logout</a></li>
+						
+                    </ul>
+                    <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>Your body is a temple,<br>but only if you treat it as one.</h1>
+                <a class="btn btn-full js--scroll-to-plans" href="calories.html">Burn calories</a>
+                <a target="_blank" class="btn btn-ghost js--scroll-to-start" href="https://www.reebok.com/us/blog?SSAID=314743&cm_mmc=Rbkaffiliates_SAS-_-314743-_-None-_-banner-_-dv%3AeCom-_-cn%3A450685-_-pc%3ANone&cm_mmc1=US&cm_mmc2=reebok-NA-eCom-Affiliates-314743-None-None-US-450685-None&dclid=CM7z9aLJ4-4CFfgdtwAd-iEHow&sscid=21k5_c4ela">Show me more</a>
+            </div>
+            
+        </header>
+		
+		
+        <!-- BMI Section -->
+        <section class="section-features js--section-features" id="bmi">
+            <div class="row">
+                <h2>Dont't wish for it &mdash; Work for it</h2>
+                <p class="long-copy">
+                    Body Mass Index (BMI) is a person's weight in kilograms divided by the square of height in meters. A high BMI can be an indicator of high body fatness.
+                </p>
+            </div>
+            
+            <div class="row js--wp-1">
+                <div class="col span-1-of-3 box">
+                    <i class="ion-arrow-graph-up-right icon-big"></i>
+                    <h3>Increase in BMI might increase health problems</h3>
+                    <p>
+                        If you have a higher BMI, you're more likely to have health problems like heart disease, stroke, diabetes, gallbladder disease, sleep apnea and osteoarthritis
+                    </p>
+                </div>
+                <div class="col span-1-of-3 box">
+                    <i class="ion-ios-medkit icon-big"></i>
+                    <h3>Talk to your doctor, if you have a high (or low) BMI</h3>
+                    <p>
+                        Because BMI is just one indicator of your health, it's best to talk to your doctor if you have a BMI that is considered overweight or underweight.
+                    </p>
+                </div>
+                <div class="col span-1-of-3 box">
+                    <i class="ion-clipboard icon-big"></i>
+                    <h3>BMI doesn't tell the whole story</h3>
+                    <p>
+                        BMI should be considered along with other factors like blood lipid levels and blood pressure to determine if you're in good health.
+                    </p>
+                </div>
+				<div class="calculate">
+					<a class="btn btn-full js--scroll-to-plans calories_btn" href="bmi.html">Calculate!</a>
+				</div>
+            </div>  
+        </section>
+
+        <!-- Doctors Near me -->  
+        <section class="section-steps" id="near_me">
+            <div class="row">
+                <h2>Need some consultation &mdash; Simple choose from 1, 2, 3</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2 steps-box">
+                    <img src="resources/img/app-iPhone.png" alt="iPhone Image" class="app-screen js--wp-2">
+                </div>
+                <div class="col span-1-of-2 steps-box">
+                    <div class="works-step clearfix">
+                        <div>1</div>
+                        <p><a href="physician.html">General Physician.</a></p>
+                    </div>
+                    <div class="works-step clearfix">
+                        <div>2</div>
+                        <p><a href="gyneo.html">Gynecologist</a></p>
+                    </div>
+                    <div class="works-step clearfix">
+                        <div>3</div>
+                        <p><a href="psy.html">Psychiatrist</a></p>
+                    </div>
+					<div class="works-step clearfix">
+                        <p>
+							<a target="_blank" href="https://www.google.co.in/maps" class="btn btn-ghost js--scroll-to-start directions">Get Directions</a>
+						</p>
+					</div>
+				</div>
+            </div>
+        </section>
+		
+		
+        <!-- Workout -->
+		<section class="section-workout" id="workout">
+            <div class="row">
+                <h2>When something is delicious, it's zero calories.</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-1">
+                    <p>
+                        Don't compare yourself with someone else's version of happy or thin. Accepting yourself burns the most calories. But had a lot of food on cheat day. No worries we got you covered. Burn your calories the way you like.
+                    </p>
+                </div>
+            </div>
+			<div class="calories">
+				<a class="btn btn-full js--scroll-to-plans calories_btn" href="calories.html">Burn Calories!</a>
+			</div>
+        </section>
+		
+		
+		<!-- Insights -->
+        <section class="section-insight" id="insight">
+            <div class="row">
+                <h2>Stay Healthy , Stay Wealthy</h2>
+            </div>
+            <div class="row js--wp-3">
+                <div class="col span-1-of-3 box">
+                    <img src="resources/img/yoga.jpg" alt="Yoga">
+                    <h3>Yoga</h3>
+                    <div class="insight-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        5,000 years old
+                    </div>
+                    <div class="insight-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        Women account for 72% of yoga practitioners
+                    </div>
+                    <div class="insight-feature">
+                        <i class="ion-paper-airplane icon-small"></i>
+                        <a href="https://dailycup.yoga/" target="_blank">Daily Cup of Yoga</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-3 box">
+                    <img src="resources/img/healthy_food.jpg" alt="Healthy Food">
+                    <h3>Healthy Diet</h3>
+                    <div class="insight-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        135mn individuals are obese
+                    </div>
+                    <div class="insight-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        A healthy diet is essential for good health and nutrition
+                    </div>
+                    <div class="insight-feature">
+                        <i class="ion-paper-airplane icon-small"></i>
+                        <a href="https://www.budgetbytes.com/" target="_blank">Budget Bytes</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-3 box">
+                    <img src="resources/img/exercise.jpg" alt="Exercise">
+                    <h3>Exercise</h3>
+                    <div class="insight-feature">
+                        <i class="ion-ios-person icon-small"></i>
+                        Men exercise more than women
+                    </div>
+                    <div class="insight-feature">
+                        <i class="ion-ios-star icon-small"></i>
+                        Exercise improves health and reduces the risk of several diseases
+                    </div>
+                    <div class="insight-feature">
+                        <i class="ion-paper-airplane icon-small"></i>
+                        <a href="http://fitnessontoast.com/" target="_blank">Fitness on Toast</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#bmi">BMI</a></li>
+                        <li><a href="#near_me">Near me</a></li>
+                        <li><a href="#workout">Workout</a></li>
+                        <li><a href="#insight">Insight</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    
+	<script src="resources/js/script.js"></script>
+    
+    </body>  
+    
+</html>
+<?php 
+}else{
+     header("Location: main.php");
+     exit();
+}
