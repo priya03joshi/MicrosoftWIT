@@ -1,4 +1,4 @@
-# MicrosoftWIT.github.io
+# MicrosoftWIT Health And Fitness Website
 
 This is a Health and Fitness website through which one can use the following features
 1. Calculate their BMI (Body Mass Index)
